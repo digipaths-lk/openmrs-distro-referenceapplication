@@ -14,6 +14,15 @@ map $http_x_real_ip $forwarded_ip {
   default $remote_addr;
 }
 
+upstream frontend {
+  # always assume the frontend will be available
+  server frontend max_fails=0;
+}
+
+upstream backend {
+  server backend:8080 max_fails=0;
+}
+
 server {
   listen [::]:80;
   listen       80;
@@ -61,24 +70,13 @@ server {
   # all redirects are relative to the gateway
   absolute_redirect off;
 
-  resolver ${NGINX_LOCAL_RESOLVERS} valid=30s ipv6=off;
-
   location /openmrs/spa/ {
-    set $frontend http://frontend;
-    rewrite ^/openmrs/spa/(.*) /$1 break;
-    proxy_pass $frontend;
+    proxy_pass http://frontend/;
   }
 
   location /openmrs {
-    set $backend http://backend:8080;
     proxy_read_timeout 300s;
-    proxy_pass $backend;
-  }
-
-  location /grafana {
-    set $grafana http://grafana:3000;
-    proxy_read_timeout 300s;
-    proxy_pass $grafana;
+    proxy_pass http://backend;
   }
 
   location = /openmrs/spa/ {

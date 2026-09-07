@@ -1227,8 +1227,29 @@
       }
     }
   },
-  "@openmrs/esm-laboratory-app": {
-    "labTableColumns": ["name", "patientId", "urgency", "age", "sex", "totalOrders", "action"]
+  "@openmrs/esm-service-queues-app": {
+    "statusConfigs": [
+      {
+        "conceptUuid": "51ae5e4d-b72b-4912-bf31-a17efb690aeb",
+        "iconComponent": "InProgress"
+      },
+      {
+        "conceptUuid": "ca7494ae-437f-4fd0-8aae-b88b9a2ba47d",
+        "iconComponent": "Group"
+      },
+      {
+        "conceptUuid": "b559fb77-4e1e-4285-b9b7-1d03e0ba983f",
+        "iconComponent": "Group"
+      }
+    ],
+    "concepts": {
+      "defaultPriorityConceptUuid": "f4620bfa-3625-4883-bd3f-84c2cce14470",
+      "emergencyPriorityConceptUuid": "04f6f7e0-e3cb-4e13-a133-4479f759574e",
+      "defaultStatusConceptUuid": "51ae5e4d-b72b-4912-bf31-a17efb690aeb",
+      "defaultTransitionStatus": "ca7494ae-437f-4fd0-8aae-b88b9a2ba47d"
+    },
+    "visitQueueNumberAttributeUuid": "",
+    "defaultFacilityUrl": ""
   },
   "@openmrs/esm-styleguide": {
     "Brand color #1": "#005d5d"
@@ -1248,7 +1269,11 @@
           "gender",
           "id",
           "Clinical No",
-          "NIC"
+          "NIC",
+          "Marital Status",
+          "Ethnicity",
+          "Education",
+          "Occupation"
         ]
       }
     ],
@@ -1257,13 +1282,41 @@
         "id": "Clinical No",
         "type": "person attribute",
         "label": "Clinical No",
-        "uuid": "c1f26c3b-f7e3-43e8-acf5-4254822d3ed6"
+        "uuid": "e6e22b00-1d50-4dd8-826d-9fcf3c51d06e"
       },
       {
         "id": "NIC",
         "type": "person attribute",
         "label": "NIC No",
-        "uuid": "3593c721-cbb2-4c57-b02e-1c8f0f803bc6"
+        "uuid": "96fcfb0b-982d-4ce9-96fb-ec2808af6204"
+      },
+      {
+        "id": "Marital Status",
+        "type": "person attribute",
+        "label": "Marital Status",
+        "uuid": "2152250f-8aac-4ec1-b211-593651140c72",
+        "answerConceptSetUuid": "bc0c8936-59aa-4e45-9c96-8e029fcce235"
+      },
+      {
+        "id": "Ethnicity",
+        "type": "person attribute",
+        "label": "Ethnicity",
+        "uuid": "44eae7fe-7c21-4ea8-8bb1-6deffa4cd993",
+        "answerConceptSetUuid": "2e9eb5a2-6cab-4ea2-8c84-700e9c6963eb"
+      },
+      {
+        "id": "Education",
+        "type": "person attribute",
+        "label": "Education",
+        "uuid": "e87a20bc-be74-4949-bc0b-cc77d7d90890",
+        "answerConceptSetUuid": "d9894ad7-9bd7-4aa6-a85c-d324a17c5020"
+      },
+      {
+        "id": "Occupation",
+        "type": "person attribute",
+        "label": "Occupation",
+        "uuid": "00b13f15-2618-4c8d-bc55-ea41e058b36d",
+        "answerConceptSetUuid": "fb43385f-0ca5-498c-b9bd-632d082d32bc"
       }
     ]
   },
