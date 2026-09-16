@@ -99,8 +99,15 @@
                     "encounterType": "34daa3d4-7ec7-453a-8ee1-12cee76fba8b",
                     "concept": "89163c5c-bbf9-5fff-b5e8-8a98d2d0be9b",
                     "hasSummary": true,
-                    "type": "hivStatus",
+                    "type": "hivStatus"
+                  },
+                  { "id": "BpControlStatus",
+                    "title": "BP Control status",
+                    "concept": "9e2e63fd-52af-4f34-85f1-06327b075d4c",
+                    "encounterType": "34daa3d4-7ec7-453a-8ee1-12cee76fba8b",
+                    "hasSummary": true,
                     "isColoredTag": true,
+                    "type": "hivStatus",
                     "statusColorMappings": {
                       "Blood Pressure Control": "#24a148",
                       "Poor hypertension control": "#da1e28"
@@ -457,7 +464,12 @@
                   {
                     "id": "bpTarget",
                     "title": "BP Target",
-                    "concept": "89163c5c-bbf9-5fff-b5e8-8a98d2d0be9b",
+                    "concept": "89163c5c-bbf9-5fff-b5e8-8a98d2d0be9b"
+
+                  },
+                  { "id": "BpControlStatus",
+                    "title": "BP Control status",
+                    "concept": "9e2e63fd-52af-4f34-85f1-06327b075d4c",
                     "statusColorMappings": {
                       "cff7d75c-4279-5ca2-aff1-1b9722681a05": "#24a148",
                       "158423AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA": "#da1e28"
@@ -470,13 +482,8 @@
                   },
                   {
                     "id": "pregnancy",
-                    "title": "Currently Pregnant",
+                    "title": "Currently Pregnant ",
                     "concept": "1434AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-                  },
-                  {
-                    "id": "planningpregnant",
-                    "title": "Pregnancy Planning",
-                    "concept": "1435AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
                   },
                   {
                     "id": "actions",
