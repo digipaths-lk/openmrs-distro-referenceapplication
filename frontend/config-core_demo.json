@@ -730,6 +730,21 @@
                     "concept": "151928AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
                   },
                   {
+                  "id":"CoronaryHeartDisease",
+                  "title": "Coronary Heart Disease",
+                  "concept":"119816AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  },
+                  {
+                    "id": "ChestPainonExertion",
+                    "title": "Chest Pain on Exertion",
+                    "concept": "153514AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  },
+                  {
+                    "id": "chestpainatrest",
+                    "title": "Chest Pain at Rest",
+                    "concept": "155495AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  },
+                  {
                     "id": "anginaPain",
                     "title": "Angina / Chest Pain",
                     "concept": "125971AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
