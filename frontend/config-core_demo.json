@@ -121,7 +121,7 @@
                 "columns": [
                   {
                     "id": "diabeticRetinopathy",
-                    "title": "Diabetic Retinopathy",
+                    "title": "Diabetic Eye Assessment",
                     "encounterType": "a06729d8-5f1a-4a96-a4ed-e2f80d76ed99",
                     "concept": "142429AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                     "hasSummary": true
@@ -532,8 +532,8 @@
                     "isDate": true
                   },
                   {
-                    "id": "diabeticRetinopathy",
-                    "title": "Diabetic Retinopathy",
+                    "id": "diabeticEye",
+                    "title": "Diabetic Eye Assessment",
                     "concept": "142429AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
                   },
                   {
@@ -543,7 +543,7 @@
                   },
                   {
                     "id": "proliferative",
-                    "title": "Proliferative",
+                    "title": "Pre-proliferative & proliferative",
                     "concept": "128401AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
                   },
                   {
@@ -568,7 +568,7 @@
                   },
                   {
                     "id": "dialysis",
-                    "title": "Dialysis",
+                    "title": "Dialysis or Transplant",
                     "concept": "161196AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
                   },
                   {
@@ -578,7 +578,7 @@
                   },
                   {
                     "id": "footDiseaseRisk",
-                    "title": "Foot Disease Risk",
+                    "title": "Active Diabetic Foot",
                     "concept": "9eecba64-854a-59d0-bd47-531cb00faad6"
                   },
                   {
