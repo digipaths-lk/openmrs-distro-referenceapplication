@@ -63,13 +63,6 @@
                       "CVS Risk Factor 20% to less than 30%": "#d02670",
                       "CVS Risk Factor Equal or more than 30%": "#da1e28"
                     }
-                  },
-                  {
-                    "id": "medicationAdherence",
-                    "title": "Medication Adherence",
-                    "encounterType": "adf45dc4-bd3b-48a5-aac7-ecf30988cb5c",
-                    "concept": "164075AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "hasSummary": true
                   }
                 ]
               },
@@ -146,13 +139,6 @@
                     "encounterType": "a06729d8-5f1a-4a96-a4ed-e2f80d76ed99",
                     "concept": "7a9c7d10-287a-508d-8306-b74ece5afaae",
                     "hasSummary": true
-                  },
-                  {
-                    "id": "footcareAdvice",
-                    "title": "Footcare Advice",
-                    "encounterType": "a06729d8-5f1a-4a96-a4ed-e2f80d76ed99",
-                    "concept": "206a3061-594c-5ea6-943c-9b820c1e01b5",
-                    "hasSummary": true
                   }
                 ]
               },
@@ -186,13 +172,6 @@
                 "tileHeader": "CKD Specific",
                 "maxColumnsPerRow": 4,
                 "columns": [
-                  {
-                    "id": "gfr",
-                    "title": "eGFR",
-                    "encounterType": "b903a423-48e0-4d77-b2e7-7ea386c4c725",
-                    "concept": "161133AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "hasSummary": true
-                  },
                   {
                     "id": "gfrStage",
                     "title": "GFR Stage",
@@ -231,41 +210,6 @@
                       "A2 - Moderately increased": "#9da832",
                       "A3 - Severely increased": "#FC8400"
                     }
-                  },
-                  {
-                    "id": "serumCalcium",
-                    "title": "Serum Calcium (mmol/L)",
-                    "encounterType": "b903a423-48e0-4d77-b2e7-7ea386c4c725",
-                    "concept": "166038AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "hasSummary": true
-                  },
-                  {
-                    "id": "serumPhosphate",
-                    "title": "Serum Phosphate (g/dL)",
-                    "encounterType": "b903a423-48e0-4d77-b2e7-7ea386c4c725",
-                    "concept": "161154AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "hasSummary": true
-                  },
-                  {
-                    "id": "sodium",
-                    "title": "Sodium (Na+) mmol/l",
-                    "encounterType": "b903a423-48e0-4d77-b2e7-7ea386c4c725",
-                    "concept": "1132AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "hasSummary": true
-                  },
-                  {
-                    "id": "potassium",
-                    "title": "Potassium (K+) mmol/l",
-                    "encounterType": "b903a423-48e0-4d77-b2e7-7ea386c4c725",
-                    "concept": "1133AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "hasSummary": true
-                  },
-                  {
-                    "id": "chloride",
-                    "title": "Chloride (Cl-) mmol/l",
-                    "encounterType": "b903a423-48e0-4d77-b2e7-7ea386c4c725",
-                    "concept": "1134AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "hasSummary": true
                   },
                   {
                     "id": "ckdRisk",
@@ -1001,6 +945,11 @@
                 "encounterType": "00dbf8b0-dfc2-48c6-aeaa-546c57e67152",
                 "columns": [
                   {
+                    "id": "suicideRisk",
+                    "title": "Suicide Risk",
+                    "concept": "112411AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  },
+                  {
                     "id": "patientGender",
                     "title": "Patient Gender",
                     "concept": "72f00424-5560-4c7f-914c-dfb979cd08e9"
@@ -1050,11 +999,7 @@
                     "title": "Sickness - MLTCs",
                     "concept": "c3b4d2ae-88f9-5a91-873d-502cedf8c26c"
                   },
-                  {
-                    "id": "suicideRisk",
-                    "title": "Suicide Risk",
-                    "concept": "112411AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-                  },
+
                   {
                     "id": "actions",
                     "title": "Actions",
