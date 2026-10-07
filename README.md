@@ -232,15 +232,62 @@ The certbot entrypoint skips certificate generation when it finds existing certi
 
 ### Running with Grafana
 
-The service can run with Grafana for monitoring logs. You can run it with:
+The distro ships an optional monitoring stack -- Grafana, Prometheus, Loki, Alloy and
+blackbox-exporter -- which collects container logs, HTTP endpoint probes and JVM metrics
+from the OpenMRS backend. Run it with:
 ```bash
-docker compose -f docker-compose.yml -f docker-compose.grafana.yml up
+docker compose -f docker-compose.yml -f docker-compose.monitoring-bundled.yml up
 ```
-Grafana will be available at http://localhost/grafana. Use admin as username and see docker-compose.grafana.yml for the initial password.
+Grafana will be available at http://localhost/grafana. Use admin as username and see docker-compose.monitoring-bundled.yml for the initial password.
 
-If you would like to use grafana in your distro, you just need to copy over `docker-compose.grafana.yml`.
+Three dashboards are provisioned automatically:
+
+| Dashboard | Data source | Shows |
+|-----------|-------------|-------|
+| Logs (home) | Loki | Container logs, filterable by service, level and free text |
+| JVM Runtime | Prometheus | Backend heap, GC, threads, loaded classes and CPU |
+| Endpoint health check | Prometheus | Availability and latency of probed HTTP endpoints |
+
+If you would like to use grafana in your distro, you just need to copy over `docker-compose.monitoring-bundled.yml`.
+
+Note that this is a single-node example: Prometheus, Loki and Grafana each store data in a
+local volume. For production or multi-replica deployments, reuse the configuration pattern
+shown here rather than the compose file itself.
+
+### Backend metrics (OpenTelemetry)
+
+JVM metrics come from the OpenTelemetry Java agent, which is bundled in the `openmrs-core`
+base image (downloaded and checksum-verified in that image's Dockerfile). Setting
+`OMRS_OTEL_ENABLED=true` makes the backend's startup script attach the agent to Tomcat.
+
+The path is: Java agent -> OTLP/HTTP -> Alloy -> Prometheus -> Grafana.
+
+Because the agent auto-instruments the whole web application, it exports HTTP server and
+JDBC client metrics in addition to the `jvm.*` family. The provisioned dashboard plots the
+JVM metrics only; anything else the agent sends is still queryable in Prometheus.
+
+#### Prometheus labels
+
+Alloy converts OTLP resource attributes into Prometheus labels:
+
+- `service.name` becomes the `job` label
+- `service.namespace`, if set, prefixes it as `job="<namespace>/<name>"`
+- `service.instance.id`, if set, becomes the `instance` label
+- all other resource attributes land on the `target_info` metric, reachable with a
+  `group_left` join on `(job, instance)`
+
+This stack sets only `OTEL_SERVICE_NAME`, so the JVM dashboard filters on
+`job="openmrs-backend"` alone. **If you run more than one backend replica, give each a
+unique `service.instance.id`** via `OTEL_RESOURCE_ATTRIBUTES` -- otherwise every replica
+writes to the same series and Prometheus rejects the duplicate samples.
+
+Metric names follow OpenTelemetry semantic conventions and are translated to Prometheus
+naming by Alloy, so upgrading the agent version in `openmrs-core` can rename series and
+require dashboard updates.
 
 ### Environment variables reference
+
+#### SSL/certificates
 
 | Variable | Default | Description |
 |----------|---------|-------------|
@@ -251,6 +298,21 @@ If you would like to use grafana in your distro, you just need to copy over `doc
 | `CERT_CONTACT_EMAIL` | (empty) | Email for Let's Encrypt notifications (required in prod mode) |
 | `CERT_RSA_KEY_SIZE` | `4096` | RSA key size for certificates |
 | `CERT_PROFILE` | (empty) | Certificate profile: `classic` (90 days), `tlsserver` (45 days), or `shortlived` (6 days). Auto-set to `shortlived` for IP addresses |
+
+#### Monitoring
+
+
+| Variable | Default | Overlay | Description |
+|----------|---------|---------|-------------|
+| `OTEL_EXPORTER_OTLP_ENDPOINT` | `http://alloy:4318` | m, g | Where the backend's OpenTelemetry agent sends OTLP data. Point this elsewhere if you run your own collector instead of the bundled Alloy |
+| `OTEL_SERVICE_NAME` | `openmrs-backend` | m, g | Becomes the Prometheus `job` label. Change it if you run more than one backend and need to tell them apart in dashboards |
+| `OTEL_RESOURCE_ATTRIBUTES` | (unset) | m, g | Extra resource attributes attached to every metric, e.g. `service.instance.id=backend-0,deployment.environment.name=prod` |
+| `OTEL_JMX_TARGET_SYSTEM` | (unset) | m, g | Collect JMX metrics for a known system, e.g. `tomcat` |
+| `ALLOY_OTLP_ENDPOINT` | (empty) | m | Upstream OTLP endpoint Alloy forwards metrics to, e.g. a Grafana Cloud or other vendor endpoint. Required: `monitoring-init` fails if it is unset. The format depends on `ALLOY_OTLP_PROTOCOL`: with `http`, the base URL including the scheme and without the `/v1/metrics` suffix the exporter appends itself, e.g. `https://otlp-gateway-prod-eu-west-2.grafana.net/otlp`; with `grpc`, `host:port` with no path, e.g. `collector.example.org:4317` |
+| `ALLOY_OTLP_PROTOCOL` | `http` | m | Protocol used for that upstream export. Valid values: `grpc`, `http` |
+| `ALLOY_OTLP_HEADERS` | (empty) | m | Headers sent with the upstream export, typically authentication. A JSON object, e.g. `{"Authorization":"Basic <base64>"}` |
+| `ALLOY_OTLP_INSECURE` | `false` | m | Set to `true` to skip TLS when talking to the upstream endpoint |
+| `GRAFANA_ADMIN_PASSWORD` | `Admin123` | g | Password for Grafana's `admin` user. Change this before exposing Grafana |
 
 ## Contributing to the configuration
 

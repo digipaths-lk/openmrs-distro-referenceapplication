@@ -24,24 +24,24 @@
     <!-- track module versions
          we do so here so that we can utilise Maven to track updates, etc. -->
     <openmrs.version>2.8.10-SNAPSHOT</openmrs.version>
-    <initializer.version>2.12.0</initializer.version>
-    <fhir2.version>4.2.0</fhir2.version>
-    <webservices.rest.version>3.5.0</webservices.rest.version>
-    <addresshierarchy.version>2.21.0</addresshierarchy.version>
-    <patientdocuments.version>1.2.0-SNAPSHOT</patientdocuments.version>
+    <initializer.version>2.12.1</initializer.version>
+    <fhir2.version>4.3.0</fhir2.version>
+    <webservices.rest.version>3.6.0</webservices.rest.version>
+    <addresshierarchy.version>3.0.0</addresshierarchy.version>
+    <patientdocuments.version>1.2.0</patientdocuments.version>
     <idgen.version>5.0.4</idgen.version>
     <legacyui.version>2.2.0</legacyui.version>
     <metadatamapping.version>2.0.0</metadatamapping.version>
-    <metadataexport.version>1.0.0-SNAPSHOT</metadataexport.version>
-    <openconceptlab.version>3.2.0</openconceptlab.version>
-    <attachments.version>4.0.0</attachments.version>
-    <referencedemodata.version>2.6.1</referencedemodata.version>
-    <queue.version>3.1.0-SNAPSHOT</queue.version>
+    <metadataexport.version>1.0.0</metadataexport.version>
+    <openconceptlab.version>4.0.0</openconceptlab.version>
+    <attachments.version>4.1.0</attachments.version>
+    <referencedemodata.version>2.7.0</referencedemodata.version>
+    <queue.version>3.1.0</queue.version>
     <appointments.version>2.1.0</appointments.version>
     <teleconsultation.version>2.0.0</teleconsultation.version>
     <cohort.version>3.7.3</cohort.version>
-    <authentication.version>2.3.0</authentication.version>
-    <reporting.version>2.2.0-SNAPSHOT</reporting.version>
+    <authentication.version>2.4.0</authentication.version>
+    <reporting.version>2.2.0</reporting.version>
     <reportingrest.version>2.0.0</reportingrest.version>
     <!-- the next three are required for reporting -->
     <calculation.version>2.0.0</calculation.version>
@@ -50,16 +50,22 @@
     <ordertemplates.version>2.2.0</ordertemplates.version>
     <patientflags.version>3.0.10</patientflags.version>
     <o3forms.version>2.3.0</o3forms.version>
-    <emrapi.version>3.5.0-SNAPSHOT</emrapi.version>
+    <emrapi.version>3.5.0</emrapi.version>
     <event.version>4.0.0</event.version>
     <bedmanagement.version>7.2.0</bedmanagement.version>
     <!-- Stock Management and Billing -->
     <stockmanagement.version>3.0.0</stockmanagement.version>
-    <billing.version>2.4.0</billing.version>
+    <billing.version>2.5.0</billing.version>
     <tasks.version>2.1.0</tasks.version>
     <!-- Content Packages -->
     <reference-content.version>1.4.0</reference-content.version>
-    <reference-demo-content.version>1.9.3-SNAPSHOT</reference-demo-content.version>
+    <reference-demo-content.version>2.0.0</reference-demo-content.version>
+    <reference-showcase-content.version>1.0.0</reference-showcase-content.version>
+    <!-- For Digipath module  -->
+    <appframework.version>2.19.0</appframework.version>
+    <uiframework.version>3.25.0</uiframework.version>
+    <uicommons.version>2.26.0</uicommons.version>
+    <appui.version>1.18.0</appui.version>
   </properties>
 
   <dependencies>
@@ -252,6 +258,55 @@
       <version>${tasks.version}</version>
       <scope>provided</scope>
     </dependency>
+
+    <dependency>
+      <groupId>org.openmrs.module</groupId>
+      <artifactId>appframework-omod</artifactId>
+      <version>${appframework.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.openmrs.module</groupId>
+      <artifactId>uiframework-omod</artifactId>
+      <version>${uiframework.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.openmrs.module</groupId>
+      <artifactId>uicommons-omod</artifactId>
+      <version>${uicommons.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.openmrs.module</groupId>
+      <artifactId>appui-omod</artifactId>
+      <version>${appui.version}</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <!-- Content packages -->
+    <dependency>
+      <groupId>org.openmrs.content</groupId>
+      <artifactId>referenceapplication</artifactId>
+      <version>${reference-content.version}</version>
+      <type>zip</type>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.openmrs.content</groupId>
+      <artifactId>referenceapplication-demo</artifactId>
+      <version>${reference-demo-content.version}</version>
+      <type>zip</type>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.openmrs.content</groupId>
+      <artifactId>referenceapplication-showcase</artifactId>
+      <version>${reference-showcase-content.version}</version>
+      <type>zip</type>
+      <scope>provided</scope>
+    </dependency>
+
   </dependencies>
 
   <build>
@@ -316,6 +371,27 @@
               <descriptors>
                 <descriptor>src/main/assembly/assembly.xml</descriptor>
               </descriptors>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>overlay-local-openmrs-config</id>
+            <phase>package</phase>
+            <goals><goal>run</goal></goals>
+            <configuration>
+              <target>
+                <copy todir="${distro.openmrsConfigDir}" overwrite="true" failonerror="false">
+                  <fileset dir="${project.basedir}/src/main/resources/openmrs_config" erroronmissingdir="false"/>
+                </copy>
+                <copy todir="${project.build.directory}/sdk-distro/web/openmrs_config" overwrite="true" failonerror="false">
+                  <fileset dir="${project.basedir}/src/main/resources/openmrs_config" erroronmissingdir="false"/>
+                </copy>
+              </target>
             </configuration>
           </execution>
         </executions>
