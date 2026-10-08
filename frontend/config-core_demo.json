@@ -63,13 +63,6 @@
                       "CVS Risk Factor 20% to less than 30%": "#d02670",
                       "CVS Risk Factor Equal or more than 30%": "#da1e28"
                     }
-                  },
-                  {
-                    "id": "medicationAdherence",
-                    "title": "Medication Adherence",
-                    "encounterType": "adf45dc4-bd3b-48a5-aac7-ecf30988cb5c",
-                    "concept": "164075AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "hasSummary": true
                   }
                 ]
               },
@@ -99,8 +92,15 @@
                     "encounterType": "34daa3d4-7ec7-453a-8ee1-12cee76fba8b",
                     "concept": "89163c5c-bbf9-5fff-b5e8-8a98d2d0be9b",
                     "hasSummary": true,
-                    "type": "hivStatus",
+                    "type": "hivStatus"
+                  },
+                  { "id": "BpControlStatus",
+                    "title": "BP Control status",
+                    "concept": "9e2e63fd-52af-4f34-85f1-06327b075d4c",
+                    "encounterType": "34daa3d4-7ec7-453a-8ee1-12cee76fba8b",
+                    "hasSummary": true,
                     "isColoredTag": true,
+                    "type": "hivStatus",
                     "statusColorMappings": {
                       "Blood Pressure Control": "#24a148",
                       "Poor hypertension control": "#da1e28"
@@ -114,7 +114,7 @@
                 "columns": [
                   {
                     "id": "diabeticRetinopathy",
-                    "title": "Diabetic Retinopathy",
+                    "title": "Diabetic Eye Assessment",
                     "encounterType": "a06729d8-5f1a-4a96-a4ed-e2f80d76ed99",
                     "concept": "142429AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                     "hasSummary": true
@@ -128,9 +128,9 @@
                   },
                   {
                     "id": "activeDiabeticFootDisease",
-                    "title": "Active Foot Disease",
+                    "title": "Active Diabetic Foot Disease Risk",
                     "encounterType": "a06729d8-5f1a-4a96-a4ed-e2f80d76ed99",
-                    "concept": "142452AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "concept": "9eecba64-854a-59d0-bd47-531cb00faad6",
                     "hasSummary": true
                   },
                   {
@@ -138,13 +138,6 @@
                     "title": "Glycaemic Control Targets",
                     "encounterType": "a06729d8-5f1a-4a96-a4ed-e2f80d76ed99",
                     "concept": "7a9c7d10-287a-508d-8306-b74ece5afaae",
-                    "hasSummary": true
-                  },
-                  {
-                    "id": "footcareAdvice",
-                    "title": "Footcare Advice",
-                    "encounterType": "a06729d8-5f1a-4a96-a4ed-e2f80d76ed99",
-                    "concept": "206a3061-594c-5ea6-943c-9b820c1e01b5",
                     "hasSummary": true
                   }
                 ]
@@ -224,41 +217,6 @@
                       "A2 - Moderately increased": "#9da832",
                       "A3 - Severely increased": "#FC8400"
                     }
-                  },
-                  {
-                    "id": "serumCalcium",
-                    "title": "Serum Calcium (mmol/L)",
-                    "encounterType": "b903a423-48e0-4d77-b2e7-7ea386c4c725",
-                    "concept": "166038AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "hasSummary": true
-                  },
-                  {
-                    "id": "serumPhosphate",
-                    "title": "Serum Phosphate (g/dL)",
-                    "encounterType": "b903a423-48e0-4d77-b2e7-7ea386c4c725",
-                    "concept": "161154AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "hasSummary": true
-                  },
-                  {
-                    "id": "sodium",
-                    "title": "Sodium (Na+) mmol/l",
-                    "encounterType": "b903a423-48e0-4d77-b2e7-7ea386c4c725",
-                    "concept": "1132AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "hasSummary": true
-                  },
-                  {
-                    "id": "potassium",
-                    "title": "Potassium (K+) mmol/l",
-                    "encounterType": "b903a423-48e0-4d77-b2e7-7ea386c4c725",
-                    "concept": "1133AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "hasSummary": true
-                  },
-                  {
-                    "id": "chloride",
-                    "title": "Chloride (Cl-) mmol/l",
-                    "encounterType": "b903a423-48e0-4d77-b2e7-7ea386c4c725",
-                    "concept": "1134AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "hasSummary": true
                   },
                   {
                     "id": "ckdRisk",
@@ -346,7 +304,8 @@
             "tabDefinitions": [
               {
                 "headerTitle": "Common Assessment",
-                "displayText": "Common",
+                "displayText": "Assessment",
+                "tabName": "Assessment",
                 "hasFilter": false,
                 "encounterType": "adf45dc4-bd3b-48a5-aac7-ecf30988cb5c",
                 "columns": [
@@ -416,6 +375,60 @@
                   "displayText": "Add",
                   "hideFormLauncher": false
                 }
+              },
+              {
+                "headerTitle": "Common Investigations",
+                "displayText": "Investigation",
+                "tabName": "Investigation",
+                "hasFilter": false,
+                "encounterType": "adf45dc4-bd3b-48a5-aac7-ecf30988cb5c",
+                "columns": [
+                  {
+                    "id": "encounterDatetime",
+                    "title": "Date and Time",
+                    "type": "encounterDatetime",
+                    "isDate": true
+                  },
+                  {
+                    "id": "totalCholesterol",
+                    "title": "Total Cholesterol (mg/dL)",
+                    "concept": "166040AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  },
+                  {
+                    "id": "hdlCholesterol",
+                    "title": "HDL Cholesterol (mmol/L)",
+                    "concept": "1007AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  },
+                  {
+                    "id": "ldlCholesterol",
+                    "title": "LDL Cholesterol (mmol/L)",
+                    "concept": "1008AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  },
+                  {
+                    "id": "triglycerides",
+                    "title": "Triglycerides (mmol/L)",
+                    "concept": "1009AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  },
+                  {
+                    "id": "actions",
+                    "title": "Actions",
+                    "type": "actions",
+                    "launchOptions": {
+                      "displayText": "Edit",
+                      "hideFormLauncher": false
+                    }
+                  }
+                ],
+                "formList": [
+                  {
+                    "name": "Common Assessment",
+                    "uuid": "7d62aaa0-a710-4be9-92c8-5c16e64d76ea"
+                  }
+                ],
+                "launchOptions": {
+                  "displayText": "Add",
+                  "hideFormLauncher": false
+                }
               }
             ]
           }
@@ -457,7 +470,12 @@
                   {
                     "id": "bpTarget",
                     "title": "BP Target",
-                    "concept": "89163c5c-bbf9-5fff-b5e8-8a98d2d0be9b",
+                    "concept": "89163c5c-bbf9-5fff-b5e8-8a98d2d0be9b"
+
+                  },
+                  { "id": "BpControlStatus",
+                    "title": "BP Control status",
+                    "concept": "9e2e63fd-52af-4f34-85f1-06327b075d4c",
                     "statusColorMappings": {
                       "cff7d75c-4279-5ca2-aff1-1b9722681a05": "#24a148",
                       "158423AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA": "#da1e28"
@@ -470,13 +488,8 @@
                   },
                   {
                     "id": "pregnancy",
-                    "title": "Currently Pregnant",
+                    "title": "Currently Pregnant ",
                     "concept": "1434AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-                  },
-                  {
-                    "id": "planningpregnant",
-                    "title": "Pregnancy Planning",
-                    "concept": "1435AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
                   },
                   {
                     "id": "actions",
@@ -525,8 +538,8 @@
                     "isDate": true
                   },
                   {
-                    "id": "diabeticRetinopathy",
-                    "title": "Diabetic Retinopathy",
+                    "id": "diabeticEye",
+                    "title": "Diabetic Eye Assessment",
                     "concept": "142429AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
                   },
                   {
@@ -536,7 +549,7 @@
                   },
                   {
                     "id": "proliferative",
-                    "title": "Proliferative",
+                    "title": "Pre-proliferative & proliferative",
                     "concept": "128401AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
                   },
                   {
@@ -561,7 +574,7 @@
                   },
                   {
                     "id": "dialysis",
-                    "title": "Dialysis",
+                    "title": "Dialysis or Transplant",
                     "concept": "161196AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
                   },
                   {
@@ -571,7 +584,7 @@
                   },
                   {
                     "id": "footDiseaseRisk",
-                    "title": "Foot Disease Risk",
+                    "title": "Active Diabetic Foot",
                     "concept": "9eecba64-854a-59d0-bd47-531cb00faad6"
                   },
                   {
@@ -692,6 +705,60 @@
                   "displayText": "Add",
                   "hideFormLauncher": false
                 }
+              },
+              {
+                "headerTitle": "DM Investigations",
+                "displayText": "Investigation",
+                "tabName": "Investigation",
+                "hasFilter": false,
+                "encounterType": "a06729d8-5f1a-4a96-a4ed-e2f80d76ed99",
+                "columns": [
+                  {
+                    "id": "encounterDatetime",
+                    "title": "Date and Time",
+                    "type": "encounterDatetime",
+                    "isDate": true
+                  },
+                  {
+                    "id": "fbs",
+                    "title": "FBS (mg/dL)",
+                    "concept": "160912AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  },
+                  {
+                    "id": "hba1c",
+                    "title": "HbA1c (%)",
+                    "concept": "159644AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  },
+                  {
+                    "id": "ppbs",
+                    "title": "PPBS (mg/dL)",
+                    "concept": "160914AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  },
+                  {
+                    "id": "rbs",
+                    "title": "RBS (mg/dL)",
+                    "concept": "887AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  },
+                  {
+                    "id": "actions",
+                    "title": "Actions",
+                    "type": "actions",
+                    "launchOptions": {
+                      "displayText": "Edit",
+                      "hideFormLauncher": false
+                    }
+                  }
+                ],
+                "formList": [
+                  {
+                    "name": "DM Specific",
+                    "uuid": "b5642f6f-fc23-45ef-aec8-b415872d8334"
+                  }
+                ],
+                "launchOptions": {
+                  "displayText": "Add",
+                  "hideFormLauncher": false
+                }
               }
             ]
           }
@@ -721,6 +788,21 @@
                     "id": "familyHistoryCVD",
                     "title": "Family History CVD",
                     "concept": "151928AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  },
+                  {
+                  "id":"CoronaryHeartDisease",
+                  "title": "Coronary Heart Disease",
+                  "concept":"119816AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  },
+                  {
+                    "id": "ChestPainonExertion",
+                    "title": "Chest Pain on Exertion",
+                    "concept": "153514AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  },
+                  {
+                    "id": "chestpainatrest",
+                    "title": "Chest Pain at Rest",
+                    "concept": "155495AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
                   },
                   {
                     "id": "anginaPain",
@@ -979,6 +1061,11 @@
                 "encounterType": "00dbf8b0-dfc2-48c6-aeaa-546c57e67152",
                 "columns": [
                   {
+                    "id": "suicideRisk",
+                    "title": "Suicide Risk",
+                    "concept": "112411AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  },
+                  {
                     "id": "patientGender",
                     "title": "Patient Gender",
                     "concept": "72f00424-5560-4c7f-914c-dfb979cd08e9"
@@ -1028,11 +1115,7 @@
                     "title": "Sickness - MLTCs",
                     "concept": "c3b4d2ae-88f9-5a91-873d-502cedf8c26c"
                   },
-                  {
-                    "id": "suicideRisk",
-                    "title": "Suicide Risk",
-                    "concept": "112411AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-                  },
+
                   {
                     "id": "actions",
                     "title": "Actions",
