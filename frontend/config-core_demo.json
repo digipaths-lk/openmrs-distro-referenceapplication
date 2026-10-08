@@ -128,9 +128,9 @@
                   },
                   {
                     "id": "activeDiabeticFootDisease",
-                    "title": "Active Foot Disease",
+                    "title": "Active Diabetic Foot Disease Risk",
                     "encounterType": "a06729d8-5f1a-4a96-a4ed-e2f80d76ed99",
-                    "concept": "142452AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "concept": "9eecba64-854a-59d0-bd47-531cb00faad6",
                     "hasSummary": true
                   },
                   {
@@ -172,6 +172,13 @@
                 "tileHeader": "CKD Specific",
                 "maxColumnsPerRow": 4,
                 "columns": [
+                  {
+                    "id": "gfr",
+                    "title": "eGFR",
+                    "encounterType": "b903a423-48e0-4d77-b2e7-7ea386c4c725",
+                    "concept": "161133AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "hasSummary": true
+                  },
                   {
                     "id": "gfrStage",
                     "title": "GFR Stage",
@@ -297,7 +304,8 @@
             "tabDefinitions": [
               {
                 "headerTitle": "Common Assessment",
-                "displayText": "Common",
+                "displayText": "Assessment",
+                "tabName": "Assessment",
                 "hasFilter": false,
                 "encounterType": "adf45dc4-bd3b-48a5-aac7-ecf30988cb5c",
                 "columns": [
@@ -346,6 +354,60 @@
                     "id": "medicationAdherence",
                     "title": "Medication Adherence Assessment",
                     "concept": "164075AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  },
+                  {
+                    "id": "actions",
+                    "title": "Actions",
+                    "type": "actions",
+                    "launchOptions": {
+                      "displayText": "Edit",
+                      "hideFormLauncher": false
+                    }
+                  }
+                ],
+                "formList": [
+                  {
+                    "name": "Common Assessment",
+                    "uuid": "7d62aaa0-a710-4be9-92c8-5c16e64d76ea"
+                  }
+                ],
+                "launchOptions": {
+                  "displayText": "Add",
+                  "hideFormLauncher": false
+                }
+              },
+              {
+                "headerTitle": "Common Investigations",
+                "displayText": "Investigation",
+                "tabName": "Investigation",
+                "hasFilter": false,
+                "encounterType": "adf45dc4-bd3b-48a5-aac7-ecf30988cb5c",
+                "columns": [
+                  {
+                    "id": "encounterDatetime",
+                    "title": "Date and Time",
+                    "type": "encounterDatetime",
+                    "isDate": true
+                  },
+                  {
+                    "id": "totalCholesterol",
+                    "title": "Total Cholesterol (mg/dL)",
+                    "concept": "166040AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  },
+                  {
+                    "id": "hdlCholesterol",
+                    "title": "HDL Cholesterol (mmol/L)",
+                    "concept": "1007AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  },
+                  {
+                    "id": "ldlCholesterol",
+                    "title": "LDL Cholesterol (mmol/L)",
+                    "concept": "1008AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  },
+                  {
+                    "id": "triglycerides",
+                    "title": "Triglycerides (mmol/L)",
+                    "concept": "1009AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
                   },
                   {
                     "id": "actions",
@@ -622,6 +684,60 @@
                     "id": "glycaemicTargets",
                     "title": "Glycaemic Control Targets",
                     "concept": "7a9c7d10-287a-508d-8306-b74ece5afaae"
+                  },
+                  {
+                    "id": "actions",
+                    "title": "Actions",
+                    "type": "actions",
+                    "launchOptions": {
+                      "displayText": "Edit",
+                      "hideFormLauncher": false
+                    }
+                  }
+                ],
+                "formList": [
+                  {
+                    "name": "DM Specific",
+                    "uuid": "b5642f6f-fc23-45ef-aec8-b415872d8334"
+                  }
+                ],
+                "launchOptions": {
+                  "displayText": "Add",
+                  "hideFormLauncher": false
+                }
+              },
+              {
+                "headerTitle": "DM Investigations",
+                "displayText": "Investigation",
+                "tabName": "Investigation",
+                "hasFilter": false,
+                "encounterType": "a06729d8-5f1a-4a96-a4ed-e2f80d76ed99",
+                "columns": [
+                  {
+                    "id": "encounterDatetime",
+                    "title": "Date and Time",
+                    "type": "encounterDatetime",
+                    "isDate": true
+                  },
+                  {
+                    "id": "fbs",
+                    "title": "FBS (mg/dL)",
+                    "concept": "160912AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  },
+                  {
+                    "id": "hba1c",
+                    "title": "HbA1c (%)",
+                    "concept": "159644AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  },
+                  {
+                    "id": "ppbs",
+                    "title": "PPBS (mg/dL)",
+                    "concept": "160914AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  },
+                  {
+                    "id": "rbs",
+                    "title": "RBS (mg/dL)",
+                    "concept": "887AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
                   },
                   {
                     "id": "actions",
