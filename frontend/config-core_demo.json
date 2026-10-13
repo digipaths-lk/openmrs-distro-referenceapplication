@@ -128,7 +128,7 @@
                   },
                   {
                     "id": "activeDiabeticFootDisease",
-                    "title": "Active Diabetic Foot Disease Risk",
+                    "title": "Active Diabetic Foot Risk",
                     "encounterType": "a06729d8-5f1a-4a96-a4ed-e2f80d76ed99",
                     "concept": "9eecba64-854a-59d0-bd47-531cb00faad6",
                     "hasSummary": true
@@ -564,7 +564,7 @@
                   },
                   {
                     "id": "activeDiabeticFootDisease",
-                    "title": "Active Foot Disease",
+                    "title": "Active Diabetic Foot Disease",
                     "concept": "142452AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
                   },
                   {
@@ -584,7 +584,7 @@
                   },
                   {
                     "id": "footDiseaseRisk",
-                    "title": "Active Diabetic Foot",
+                    "title": "Active Diabetic Foot Risk",
                     "concept": "9eecba64-854a-59d0-bd47-531cb00faad6"
                   },
                   {
@@ -813,6 +813,26 @@
                     "id": "calvesPain",
                     "title": "Calves Pain",
                     "concept": "116734AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  },
+                  {
+                    "id": "Dorsalispedispulsepresent",
+                    "title": "Dorsalis pedis pulse present",
+                    "concept": "06af6108-8f02-4156-9848-1e05b59825f4"
+                  },
+                  {
+                    "id": "Dorsalispedispulseabsent",
+                    "title": "Dorsalis pedis pulse absent",
+                    "concept": "23525019-0075-4334-bda3-59527eb4b79b"
+                  },
+                  {
+                    "id": "Posteriortibialpulsepresent",
+                    "title": "Posterior tibial pulse present",
+                    "concept": "02c09d91-7e07-417b-9fc7-ca4f0c6a5696"
+                  },
+                  {
+                    "id": "Posteriortibialpulseabsent",
+                    "title": "Posterior tibial pulse absent",
+                    "concept": "0bf6dd42-147d-4025-a094-779eeb6cf21f"
                   },
                   {
                     "id": "actions",
