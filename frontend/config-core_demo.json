@@ -128,7 +128,7 @@
                   },
                   {
                     "id": "activeDiabeticFootDisease",
-                    "title": "Active Diabetic Foot Disease Risk",
+                    "title": "Active Diabetic Foot Risk",
                     "encounterType": "a06729d8-5f1a-4a96-a4ed-e2f80d76ed99",
                     "concept": "9eecba64-854a-59d0-bd47-531cb00faad6",
                     "hasSummary": true
@@ -584,7 +584,7 @@
                   },
                   {
                     "id": "footDiseaseRisk",
-                    "title": "Active Diabetic Foot",
+                    "title": "Active Diabetic Foot Risk",
                     "concept": "9eecba64-854a-59d0-bd47-531cb00faad6"
                   },
                   {
