@@ -9,7 +9,7 @@
     "@openmrs/esm-dispensing-app": "next",
     "@openmrs/esm-fast-data-entry-app": "next",
     "@openmrs/esm-form-builder-app": "file:openmrs-esm-form-builder-app-3.4.1-14.tgz",
-    "@openmrs/esm-form-engine-app": "file:openmrs-esm-form-engine-app-12.1.0-15.tgz",
+    "@openmrs/esm-form-engine-app": "file:openmrs-esm-form-engine-app-13.0.0-2.tgz",
     "@openmrs/esm-generic-patient-widgets-app": "next",
     "@openmrs/esm-help-menu-app": "next",
     "@openmrs/esm-home-app": "next",
@@ -21,7 +21,7 @@
     "@openmrs/esm-patient-allergies-app": "next",
     "@openmrs/esm-patient-attachments-app": "next",
     "@openmrs/esm-patient-banner-app": "next",
-    "@openmrs/esm-patient-chart-app": "file:openmrs-esm-patient-chart-app-12.3.4-4.tgz",
+    "@openmrs/esm-patient-chart-app": "file:openmrs-esm-patient-chart-app-12.3.4-7.tgz",
     "@openmrs/esm-patient-conditions-app": "next",
     "@openmrs/esm-patient-documents-admin-app": "next",
     "@openmrs/esm-patient-flags-app": "next",
@@ -48,7 +48,7 @@
     "@openmrs/esm-system-admin-app": "next",
     "@openmrs/esm-user-onboarding-app": "next",
     "@openmrs/esm-ward-app": "next",
-    "@openmrs/esm-patient-digipaths-app": "file:openmrs-esm-patient-digipaths-app-1.0.0-19.tgz"
+    "@openmrs/esm-patient-digipaths-app": "file:openmrs-esm-patient-digipaths-app-1.0.0-25.tgz"
   },
   "excludedFrontendModules": []
 }
