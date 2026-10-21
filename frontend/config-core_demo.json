@@ -334,6 +334,12 @@
                     "concept": "163201AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
                   },
                   {
+                    "id": "DurationSinceStoppedSmoking",
+                    "title": "Duration since stopped smoking",
+                    "concept": "019e2050-0258-4a29-86fa-c31a682c3158"
+                  },
+
+                  {
                     "id": "cvdRiskAssessment",
                     "title": "CVD Risk Assessment Score",
                     "concept": "163214AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
@@ -352,14 +358,19 @@
                     }
                   },
                   {
-                    "id": "lifestyleAdvice",
-                    "title": "Lifestyle Advice Given",
-                    "concept": "e7d81a1e-a76f-505e-a276-e8bf650bbc2c"
+                    "id": "weight",
+                    "title": "Weight (kg)",
+                    "concept": "5089AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
                   },
                   {
-                    "id": "medicationAdherence",
-                    "title": "Medication Adherence Assessment",
-                    "concept": "164075AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                    "id": "height",
+                    "title": "Height (cm)",
+                    "concept": "5090AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  },
+                  {
+                    "id": "bmi",
+                    "title": "BMI (kg/m²)",
+                    "concept": "1342AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
                   },
                   {
                     "id": "actions",
