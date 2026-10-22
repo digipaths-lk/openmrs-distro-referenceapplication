@@ -916,31 +916,6 @@
                     }
                   },
                   {
-                    "id": "serumCalcium",
-                    "title": "Serum Calcium (mmol/L)",
-                    "concept": "166038AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-                  },
-                  {
-                    "id": "serumPhosphate",
-                    "title": "Serum Phosphate (g/dL)",
-                    "concept": "161154AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-                  },
-                  {
-                    "id": "sodium",
-                    "title": "Sodium (Na+) mmol/ll",
-                    "concept": "1132AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-                  },
-                  {
-                    "id": "potassium",
-                    "title": "Potassium (K+) mmol/l",
-                    "concept": "1133AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-                  },
-                  {
-                    "id": "chloride",
-                    "title": "Chloride (Cl-) mmol/l",
-                    "concept": "1134AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-                  },
-                  {
                     "id": "actions",
                     "title": "Actions",
                     "type": "actions",
