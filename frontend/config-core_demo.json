@@ -367,11 +367,6 @@
                     "concept": "5089AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
                   },
                   {
-                    "id": "height",
-                    "title": "Height (cm)",
-                    "concept": "5090AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-                  },
-                  {
                     "id": "bmi",
                     "title": "BMI (kg/m²)",
                     "concept": "1342AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
@@ -760,16 +755,6 @@
                   "id":"CoronaryHeartDisease",
                   "title": "Coronary Heart Disease",
                   "concept":"119816AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-                  },
-                  {
-                    "id": "ChestPainonExertion",
-                    "title": "Chest Pain on Exertion",
-                    "concept": "153514AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-                  },
-                  {
-                    "id": "chestpainatrest",
-                    "title": "Chest Pain at Rest",
-                    "concept": "155495AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
                   },
                   {
                     "id": "anginaPain",
