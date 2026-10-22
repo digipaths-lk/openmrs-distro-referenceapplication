@@ -119,31 +119,38 @@
                 "maxColumnsPerRow": 4,
                 "columns": [
                   {
-                    "id": "diabeticRetinopathy",
-                    "title": "Diabetic Eye Assessment",
+                    "id": "diabeticEyeDisease",
+                    "title": "Diabetic Eye Disease",
                     "encounterType": "a06729d8-5f1a-4a96-a4ed-e2f80d76ed99",
-                    "concept": "142429AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "concept": "f81834c7-8bc5-519e-9b09-73ed2c292a29",
                     "hasSummary": true
                   },
                   {
-                    "id": "diabeticFootExam",
-                    "title": "Foot Examination",
+                    "id": "proliferative",
+                    "title": "Pre-proliferative & proliferative",
                     "encounterType": "a06729d8-5f1a-4a96-a4ed-e2f80d76ed99",
-                    "concept": "165471AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "concept": "128401AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "hasSummary": true
+                  },
+                  {
+                    "id": "diabeticMaculopathy",
+                    "title": "Diabetic Maculopathy",
+                    "encounterType": "a06729d8-5f1a-4a96-a4ed-e2f80d76ed99",
+                    "concept": "2cb18207-160a-5e58-97da-96a7826a7d6c",
                     "hasSummary": true
                   },
                   {
                     "id": "activeDiabeticFootDisease",
-                    "title": "Active Diabetic Foot Risk",
+                    "title": "Active Diabetic Foot Disease",
                     "encounterType": "a06729d8-5f1a-4a96-a4ed-e2f80d76ed99",
-                    "concept": "9eecba64-854a-59d0-bd47-531cb00faad6",
+                    "concept": "142452AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                     "hasSummary": true
                   },
                   {
-                    "id": "glycaemicTargets",
-                    "title": "Glycaemic Control Targets",
+                    "id": "diabeticFootRisk",
+                    "title": "Diabetic Foot Risk",
                     "encounterType": "a06729d8-5f1a-4a96-a4ed-e2f80d76ed99",
-                    "concept": "7a9c7d10-287a-508d-8306-b74ece5afaae",
+                    "concept": "9eecba64-854a-59d0-bd47-531cb00faad6",
                     "hasSummary": true
                   }
                 ]
@@ -543,8 +550,8 @@
                     "concept": "155871AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
                   },
                   {
-                    "id": "footDiseaseRisk",
-                    "title": "Active Diabetic Foot Risk",
+                    "id": "diabeticFootRisk",
+                    "title": "Diabetic Foot Risk",
                     "concept": "9eecba64-854a-59d0-bd47-531cb00faad6"
                   },
                   {
