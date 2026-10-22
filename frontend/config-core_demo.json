@@ -311,7 +311,6 @@
               {
                 "headerTitle": "Common Assessment",
                 "displayText": "Assessment",
-                "tabName": "Assessment",
                 "hasFilter": false,
                 "encounterType": "adf45dc4-bd3b-48a5-aac7-ecf30988cb5c",
                 "columns": [
@@ -320,13 +319,6 @@
                     "title": "Date and Time",
                     "type": "encounterDatetime",
                     "isDate": true
-                  },
-                  {
-                    "id": "diabetesCondition",
-                    "title": "Condition",
-                    "rendering": "conditionField",
-                    "conditionCode": "119481AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "field": "code"
                   },
                   {
                     "id": "smoking",
@@ -358,6 +350,11 @@
                     }
                   },
                   {
+                    "id": "totalCholesterol",
+                    "title": "Total Cholesterol (mg/dL)",
+                    "concept": "166040AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  },
+                  {
                     "id": "weight",
                     "title": "Weight (kg)",
                     "concept": "5089AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
@@ -371,60 +368,6 @@
                     "id": "bmi",
                     "title": "BMI (kg/m²)",
                     "concept": "1342AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-                  },
-                  {
-                    "id": "actions",
-                    "title": "Actions",
-                    "type": "actions",
-                    "launchOptions": {
-                      "displayText": "Edit",
-                      "hideFormLauncher": false
-                    }
-                  }
-                ],
-                "formList": [
-                  {
-                    "name": "Common Assessment",
-                    "uuid": "7d62aaa0-a710-4be9-92c8-5c16e64d76ea"
-                  }
-                ],
-                "launchOptions": {
-                  "displayText": "Add",
-                  "hideFormLauncher": false
-                }
-              },
-              {
-                "headerTitle": "Common Investigations",
-                "displayText": "Investigation",
-                "tabName": "Investigation",
-                "hasFilter": false,
-                "encounterType": "adf45dc4-bd3b-48a5-aac7-ecf30988cb5c",
-                "columns": [
-                  {
-                    "id": "encounterDatetime",
-                    "title": "Date and Time",
-                    "type": "encounterDatetime",
-                    "isDate": true
-                  },
-                  {
-                    "id": "totalCholesterol",
-                    "title": "Total Cholesterol (mg/dL)",
-                    "concept": "166040AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-                  },
-                  {
-                    "id": "hdlCholesterol",
-                    "title": "HDL Cholesterol (mmol/L)",
-                    "concept": "1007AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-                  },
-                  {
-                    "id": "ldlCholesterol",
-                    "title": "LDL Cholesterol (mmol/L)",
-                    "concept": "1008AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-                  },
-                  {
-                    "id": "triglycerides",
-                    "title": "Triglycerides (mmol/L)",
-                    "concept": "1009AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
                   },
                   {
                     "id": "actions",
