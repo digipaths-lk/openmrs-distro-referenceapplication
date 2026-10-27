@@ -39,7 +39,7 @@
     "@openmrs/esm-patient-search-app": "next",
     "@openmrs/esm-patient-task-list-app": "next",
     "@openmrs/esm-patient-tests-app": "next",
-    "@openmrs/esm-patient-vitals-app": "next",
+    "@openmrs/esm-patient-vitals-app": "13.0.1",
     "@openmrs/esm-patient-procedures-app": "next",
     "@openmrs/esm-primary-navigation-app": "next",
     "@openmrs/esm-reports-app": "next",
