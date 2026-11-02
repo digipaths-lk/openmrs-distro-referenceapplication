@@ -9,7 +9,7 @@
     "@openmrs/esm-dispensing-app": "1.11.3-pre.2011",
     "@openmrs/esm-fast-data-entry-app": "1.6.1-pre.1012",
     "@openmrs/esm-form-builder-app": "file:openmrs-esm-form-builder-app-3.4.1-14.tgz",
-    "@openmrs/esm-form-engine-app": "file:openmrs-esm-form-engine-app-13.0.0-2.tgz",
+    "@openmrs/esm-form-engine-app": "file:openmrs-esm-form-engine-app-13.0.0-3.tgz",
     "@openmrs/esm-generic-patient-widgets-app": "13.0.1",
     "@openmrs/esm-help-menu-app": "11.0.1-pre.5806",
     "@openmrs/esm-home-app": "12.1.2-pre.10015",
@@ -48,7 +48,7 @@
     "@openmrs/esm-system-admin-app": "4.6.2-pre.976",
     "@openmrs/esm-user-onboarding-app": "4.1.2-pre.789",
     "@openmrs/esm-ward-app": "12.1.2-pre.10015",
-    "@openmrs/esm-patient-digipaths-app": "file:openmrs-esm-patient-digipaths-app-1.0.0-25.tgz"
+    "@openmrs/esm-patient-digipaths-app": "file:openmrs-esm-patient-digipaths-app-1.0.0-26.tgz"
   },
   "excludedFrontendModules": []
 }
