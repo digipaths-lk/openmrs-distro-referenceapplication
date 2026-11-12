@@ -1,0 +1,7 @@
+Uuid,Void/Retire,Name,Description,Format,Foreign uuid,Searchable
+e6e22b00-1d50-4dd8-826d-9fcf3c51d06e,,Clinical No,Patient's clinical number,java.lang.String,,false
+96fcfb0b-982d-4ce9-96fb-ec2808af6204,,NIC No,Patient's NIC number,java.lang.String,,false
+f3770b2e-4f62-49b5-ac9f-98347087e51e,,Marital Status,Patient's marital status,org.openmrs.Concept,,false
+dbed124a-8c4f-4516-8f24-1e2e599d7306,,Ethnicity,Patient's ethnicity,org.openmrs.Concept,,false
+5e6e9fee-9084-4e2c-9022-a65519ab06d1,,Education,Patient's education level,org.openmrs.Concept,,false
+ed328b84-5853-46e8-8af0-61bd19b846b9,,Occupation,Patient's occupation,org.openmrs.Concept,,false

@@ -43,8 +43,10 @@ services:
       timeout: 5s
     volumes:
       - openmrs-data:/openmrs/data
+      - ./distro/configuration/personattributetypes/registration_pat.csv:/openmrs/distribution/openmrs_config/personattributetypes/registration_pat.csv
+      - ./distro/configuration/concepts/registration_attributes_concepts.csv:/openmrs/distribution/openmrs_config/concepts/registration_attributes_concepts.csv
 
-  # MariaDB
+# MariaDB
   db:
     image: mariadb:10.11.7
     restart: "unless-stopped"
