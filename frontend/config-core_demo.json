@@ -1165,5 +1165,179 @@
     "Enabled feature flags": [
       "patient-flags"
     ]
+  },
+  "@openmrs/esm-patient-registration-app": {
+    "sections": [
+      "demographics",
+      "contact"
+    ],
+    "sectionDefinitions": [
+      {
+        "id": "demographics",
+        "name": "Basic details",
+        "fields": [
+          "name",
+          "dob",
+          "gender",
+          "id",
+          "Clinical No",
+          "NIC",
+          "Marital Status",
+          "Ethnicity",
+          "Education",
+          "Occupation"
+        ]
+      }
+    ],
+    "fieldDefinitions": [
+      {
+        "id": "Clinical No",
+        "type": "person attribute",
+        "label": "Clinical No",
+        "uuid": "e6e22b00-1d50-4dd8-826d-9fcf3c51d06e"
+      },
+      {
+        "id": "NIC",
+        "type": "person attribute",
+        "label": "NIC No",
+        "uuid": "96fcfb0b-982d-4ce9-96fb-ec2808af6204"
+      },
+      {
+        "id": "Marital Status",
+        "type": "person attribute",
+        "label": "Marital Status",
+        "uuid": "f3770b2e-4f62-49b5-ac9f-98347087e51e",
+        "answerConceptSetUuid": "01e24e84-d3aa-4b80-accd-72eb7e2f945e",
+        "customConceptAnswers": [
+          {
+            "uuid": "13ff9f94-67ff-4e4d-8515-0fe4bdd47a96",
+            "label": "Single"
+          },
+          {
+            "uuid": "0a27d2a2-1099-4b4d-aafd-a7d5091f350f",
+            "label": "Married"
+          },
+          {
+            "uuid": "097ef3a7-bc10-435d-a7d8-55c0c3a7eceb",
+            "label": "Divorced"
+          },
+          {
+            "uuid": "73472b11-b40d-4138-afd2-aa1a831bf6b9",
+            "label": "Separated"
+          },
+          {
+            "uuid": "d5ee9bc1-8ee0-4548-9eba-520feb7cea26",
+            "label": "Living together"
+          }
+        ]
+      },
+      {
+        "id": "Ethnicity",
+        "type": "person attribute",
+        "label": "Ethnicity",
+        "uuid": "dbed124a-8c4f-4516-8f24-1e2e599d7306",
+        "answerConceptSetUuid": "9df647c1-9bfc-4d37-b629-f95441445b22",
+        "customConceptAnswers": [
+          {
+            "uuid": "374eedfb-8905-4bc4-b0de-145f92b5bae7",
+            "label": "Sinhala"
+          },
+          {
+            "uuid": "637bd50f-9f21-4546-9cbb-f91a29cd6edf",
+            "label": "Sri Lankan Tamil"
+          },
+          {
+            "uuid": "7295ad4d-79bb-4a59-9f2a-a2ed28d77c5e",
+            "label": "Indian Tamil"
+          },
+          {
+            "uuid": "1caa15d1-9c8a-4ca1-a065-557fdcf0aef9",
+            "label": "Muslim"
+          },
+          {
+            "uuid": "88e89177-f985-4e5e-9dc4-a93511036d4d",
+            "label": "Malay"
+          },
+          {
+            "uuid": "7b9f485e-de94-4de7-a8e4-b23b3b2605fd",
+            "label": "Burgher"
+          },
+          {
+            "uuid": "4e11aadd-69ff-4da4-8b2c-2cde11a01ba1",
+            "label": "Other"
+          }
+        ]
+      },
+      {
+        "id": "Education",
+        "type": "person attribute",
+        "label": "Education",
+        "uuid": "5e6e9fee-9084-4e2c-9022-a65519ab06d1",
+        "answerConceptSetUuid": "946ebac0-8325-4480-84ea-c1fbd51fa629",
+        "customConceptAnswers": [
+          {
+            "uuid": "561be295-5436-4250-bdba-84bb56827863",
+            "label": "No education"
+          },
+          {
+            "uuid": "e9d9a326-b370-4f10-849b-feef16ad789d",
+            "label": "Grade 1 to 5"
+          },
+          {
+            "uuid": "4b2b209c-9021-48eb-bfbb-cd36c73729e1",
+            "label": "Grade 6 to 10"
+          },
+          {
+            "uuid": "11a88424-1547-4e6b-a792-432c35718131",
+            "label": "GCE O/L"
+          },
+          {
+            "uuid": "8533907b-563c-4299-8813-6fe13572bcc1",
+            "label": "GCE A/L"
+          },
+          {
+            "uuid": "79e4ad40-5412-47c0-aa86-ff2391a6300d",
+            "label": "Higher diploma"
+          },
+          {
+            "uuid": "4c91fdbc-ae37-49de-9678-fcdb8e2fd4e7",
+            "label": "University degree"
+          },
+          {
+            "uuid": "c7b78296-ba79-4fbe-af72-03ae66464fa3",
+            "label": "Post graduate"
+          }
+        ]
+      },
+      {
+        "id": "Occupation",
+        "type": "person attribute",
+        "label": "Occupation",
+        "uuid": "ed328b84-5853-46e8-8af0-61bd19b846b9",
+        "answerConceptSetUuid": "edf6109b-f197-4ce9-8de9-d10034ed3354",
+        "customConceptAnswers": [
+          {
+            "uuid": "859c7ac6-8368-40f8-8e0a-83470cf6089c",
+            "label": "Unemployed"
+          },
+          {
+            "uuid": "3422d9cd-359e-46a4-8457-667cf3b6f86e",
+            "label": "Home maker"
+          },
+          {
+            "uuid": "53081df9-c906-4e69-ba7d-0be57528f277",
+            "label": "Currently employed (full time)"
+          },
+          {
+            "uuid": "a2b4b84e-ee34-4559-9ddd-9f2a023c2b18",
+            "label": "Currently employed (part time)"
+          },
+          {
+            "uuid": "d63a7a00-749e-4a34-b218-6c3e2bf27c34",
+            "label": "Retired"
+          }
+        ]
+      }
+    ]
   }
 }
